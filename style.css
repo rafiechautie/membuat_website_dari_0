@@ -25,6 +25,7 @@
     display: flex;
     list-style: none;
     margin-right: 50px;
+    
 }
 .navbar-menu li{
     margin-left: 20px;
@@ -41,4 +42,49 @@
     .navbar-menu{
         display:  none;
     }
+    /* navbar toggle akan ditampilkan dan diubah tampilannya menjadi tombol, serta ditambahkan cursor pointer */
+    /* tombol tersebut akan digunakan untuk menampilkan menu navigasi ketika di click pada perangkat dengan layar kecil */
+    .hamburger-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger-icon.active .icon:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    
+    .hamburger-icon.active .icon:nth-child(3) {
+        transform: rotate(0deg);
+    }
+    .hamburger-icon .icon {
+        background-color: #fff;
+        display: block;
+        height: 3px;
+        width: 25px;
+        margin-bottom: 5px;
+    }
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 1;
+    }
+    .navbar-menu.active li {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+      
+    .navbar-menu.active li a {
+        padding: 10px;
+    }
 }
+
+
+
+
+
+  
