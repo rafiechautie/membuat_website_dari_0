@@ -29,6 +29,14 @@
 }
 .navbar-menu li{
     margin-left: 20px;
+    padding: 5px;
+}
+.navbar-menu li:hover{
+    background-color: tomato;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 20px;
+    
 }
 .navbar-menu li a {
     color: #fff;
